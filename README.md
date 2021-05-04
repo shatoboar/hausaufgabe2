@@ -32,6 +32,6 @@ _*Returns updated list of all Todos if successful.*_
 
 ### Delete Request:
 
-_**localhost:8086/deleteTodo**_ 
+_**localhost:8086/deleteTodo**_ <br/>
 With same RequestBody like mentioned above. <br/>
 _Returns String "deleted." if successful._
