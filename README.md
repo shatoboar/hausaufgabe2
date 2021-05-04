@@ -3,6 +3,6 @@ Prerequisites: Docker
 
 # how to run
 ```
-chmod +x run.sh <br />
+chmod +x run.sh 
 ./run.sh
 ```
