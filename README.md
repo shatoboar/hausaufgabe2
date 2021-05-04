@@ -12,10 +12,10 @@ chmod +x mvnw
 Database is accessible at localhost:8086.
 
 ## API
-Get Request -> localhost:8086/getTodos <br />
-returns all todos
+Get Request: localhost:8086/getTodos <br />
+_*Returns all todos.*_
 
-Post Request -> localhost:8086/addTodo <br />
+Post Request: localhost:8086/addTodo <br />
 with RequestBody with jsonstructure like following: 
 ```
 {
@@ -24,4 +24,4 @@ with RequestBody with jsonstructure like following:
   "done": boolean
 }
 ```
-returns updated list of all Todos.
+_*Returns updated list of all Todos.*_
