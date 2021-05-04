@@ -8,6 +8,13 @@ chmod +x run.sh
 chmod +x mvnw
 sudo ./run.sh
 ```
+
+## stop backend service
+```
+chmod +x stop.sh
+sudo ./stop.sh
+```
+
 ## access
 Database is accessible at _**localhost:8086**_.
 
