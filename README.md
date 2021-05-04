@@ -9,7 +9,7 @@ chmod +x mvnw
 sudo ./run.sh
 ```
 
-## stop docker container
+## stop backend service
 ```
 chmod +x stop.sh
 sudo ./stop.sh
