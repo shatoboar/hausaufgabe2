@@ -29,5 +29,6 @@ with RequestBody with jsonstructure like following:
 _*Returns updated list of all Todos.*_
 
 ### Delete Request:
+_**localhost:8086/deleteTodo**_ <br />
 With same RequestBody like mentioned above. <br/>
 _Returns String "deleted." if successful._
