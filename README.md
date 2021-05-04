@@ -9,13 +9,13 @@ chmod +x mvnw
 ./run.sh
 ```
 ## access
-Database is accessible at localhost:8086.
+Database is accessible at _**localhost:8086**_.
 
 ## API
-Get Request: localhost:8086/getTodos <br />
+Get Request: _**localhost:8086/getTodos**_ <br />
 _*Returns all todos.*_
 
-Post Request: localhost:8086/addTodo <br />
+Post Request: _**localhost:8086/addTodo**_ <br />
 with RequestBody with jsonstructure like following: 
 ```
 {
