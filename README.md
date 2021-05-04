@@ -15,7 +15,7 @@ Database is accessible at _**localhost:8086**_.
 ### Get Request: 
 
 _**localhost:8086/getTodos**_ <br /><br />
-_*Returns all todos.*_
+_*Returns all todos if successful.*_
 
 ### Post Request: 
 
@@ -28,7 +28,7 @@ with RequestBody with jsonstructure like following:
   "done": boolean
 }
 ```
-_*Returns updated list of all Todos.*_
+_*Returns updated list of all Todos if successful.*_
 
 ### Delete Request:
 
