@@ -8,6 +8,13 @@ chmod +x run.sh
 chmod +x mvnw
 sudo ./run.sh
 ```
+
+## stop docker container
+```
+chmod +x stop.sh
+sudo ./stop.sh
+```
+
 ## access
 Database is accessible at _**localhost:8086**_.
 
