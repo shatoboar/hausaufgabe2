@@ -6,7 +6,7 @@ Docker (https://docs.docker.com/engine/install/linux-postinstall/)
 ```
 chmod +x run.sh 
 chmod +x mvnw
-./run.sh
+sudo ./run.sh
 ```
 ## access
 Database is accessible at _**localhost:8086**_.
