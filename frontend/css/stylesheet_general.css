@@ -1,0 +1,135 @@
+/* General styling */
+
+.impressum {
+    border-radius: 15px;
+    background: #ADE8F4;
+    min-width: 400px;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+body {
+    height: 100%;
+
+}
+
+#pageWrapper {
+    min-width: 500px;
+    margin-right: 50px;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 50;
+    text-align: center;
+    font-family: 'Hind', sans-serif;
+    text-align: start;
+}
+
+.title {
+    color: #00B4D8;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 100px;
+    text-align: start;
+}
+
+.todo-container {
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.inputContainer {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.inputDescription {
+    width: 220px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.inputDeadline {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.input {
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    width: 350px;
+    margin: 0.25rem;
+    transition: .5s;
+    font-size: 1.15rem;
+}
+
+.add {
+    outline: none;
+    border: none;
+    height: 50px;
+    border-radius: 25px;
+    width: 50px;
+    color: gray;
+    cursor: pointer;
+    transition: .5s;
+    margin: 0.25rem;
+}
+
+.add:hover {
+    opacity: 0.7;
+}
+
+.item_input {
+    background: none;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1.4rem;
+    width: 245px;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: #ADE8F4;
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.todo-deadline {
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+#eg-todo {
+    background-color: #ADE8F4;
+    border-radius: 15px;
+
+}
+
+.edit-todo {
+    background-color: #ADE8F4;
+    border-radius: 15px;
+}

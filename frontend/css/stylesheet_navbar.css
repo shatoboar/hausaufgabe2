@@ -1,0 +1,58 @@
+/* General styling of sidebar */
+.sidebar {
+    padding: 0;
+    top: 0;
+    width: 170px;
+    background-color: #ADE8F4;
+    height: 100%;
+}
+
+/* Styling of the single list items */
+.sidebar a {
+    display: block;
+    border: 10px;
+    color: white;
+    padding: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* Styling of the currently active list item*/
+.sidebar a.active {
+    background-color: #00B4D8;
+    color: white;
+}
+
+/* Styling mouse hover */
+.sidebar a:hover:not(.active) {
+    background-color: #0096C7;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* Convert sidebar to topbar if screen gets too small */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+
+    #pageWrapper {
+        margin-top: 80px;
+    }
+}
