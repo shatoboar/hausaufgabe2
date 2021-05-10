@@ -77,26 +77,8 @@ class item {
         itemBox.appendChild(edit);
         itemBox.appendChild(remove);
 
-<<<<<<< HEAD
         // Add to database
         addItemToDatabase(description, deadline, descriptions);
-=======
-         // Add todo to database
-        var http = new XMLHttpRequest();
-        var url = 'http://localhost:8086/addTodo';
-        http.open('POST', url, true);
-        http.setRequestHeader("Content-Type", "application/json");
-        http.send(JSON.stringify({
-            "description" : description,
-            "progress" : 0,
-            "done" : false,
-            "date" : deadline}));
-        
-        // Add todo to list
-        todoList.push(description);
-
-        console.log(todoList);
->>>>>>> 38049f5e71b66bb05f87534dea0a4747ef8ddf2c
     }
 
     // Edit and Remove Button
