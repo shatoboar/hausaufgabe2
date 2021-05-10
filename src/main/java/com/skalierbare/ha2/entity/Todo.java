@@ -20,4 +20,5 @@ public class Todo {
     private String description;
     private int progress;
     private boolean done;
+    private String deadline;
 }
