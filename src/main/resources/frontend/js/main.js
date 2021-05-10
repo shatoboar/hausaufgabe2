@@ -60,7 +60,11 @@ class item{
         var url = 'http://localhost:8086/addTodo';
         http.open('POST', url, true);
         http.setRequestHeader("Content-Type", "application/json");
-        http.send(JSON.stringify({"description" : description, "progress" : 0, "done" : false, "date" : deadline}));
+        http.send(JSON.stringify({
+            "description" : description,
+            "progress" : 0,
+            "done" : false,
+            "date" : deadline}));
         
         // Add todo to list
         todoList.push(description);
