@@ -24,6 +24,16 @@ public class TodoController {
         return todoRepository.findAll();
     }
 
+    @PutMapping("/editTodo")
+    public Todo editTodo(@RequestHeader int id, @RequestBody Todo todo) {
+        Todo todoToEdit = todoRepository.getOne(id);
+        todoToEdit.setDescription(todo.getDescription());
+        todoToEdit.setProgress(todo.getProgress());
+        todoToEdit.setDeadline(todo.getDeadline());
+        return todoToEdit;
+    }
+
+
     @DeleteMapping("/deleteTodo")
     public String deleteTodo(@RequestBody Todo todo) {
         todoRepository.delete(todo);
