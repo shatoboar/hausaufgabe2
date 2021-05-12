@@ -25,12 +25,9 @@ public class TodoController {
     }
 
     @PutMapping("/editTodo")
-    public Todo editTodo(@RequestHeader int id, @RequestBody Todo todo) {
-        Todo todoToEdit = todoRepository.getOne(id);
-        todoToEdit.setDescription(todo.getDescription());
-        todoToEdit.setProgress(todo.getProgress());
-        todoToEdit.setDeadline(todo.getDeadline());
-        return todoToEdit;
+    public Todo editTodo(@RequestBody Todo todo) {
+        todoRepository.save(todo);
+        return todo;
     }
 
 
