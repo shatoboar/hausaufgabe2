@@ -7,7 +7,7 @@ const add = document.querySelector('.add'); // add button
 var todoList = []; // Will hold todo-items received by backend
 var descriptions = []; // Will hold descriptions of each received todo-item
 var ids = []; // Will hold ids of each received todo-item
-
+var editingDone = false;
 
 window.onload = function() {
     // Get todos from database when window is loaded
@@ -81,16 +81,71 @@ class item {
         addItemToDatabase(description, deadline, descriptions);
     }
 
-    // Edit and Remove Button
+// Edit and Remove Button
     edit(input, date, description) {
-        if (input.disabled == true || date.disabled == true) {
-            input.disabled = !input.disabled;
-            date.disabled = !date.disabled;
-        } else {
-            input.disabled = !input.disabled;
-            date.disabled = !date.disabled;
-        }
+    if (input.disabled == true || date.disabled == true) {
+        input.disabled = !input.disabled;
+        date.disabled = !date.disabled;
+    } else {
+        input.disabled = !input.disabled;
+        date.disabled = !date.disabled;
     }
+
+    if(editingDone) {
+
+    // 1) Get current information
+    var descriptions = [];
+    var ids = [];
+    var http2 = new XMLHttpRequest();
+    var url_get = 'http://localhost:8086/getTodos';
+    http2.onreadystatechange = function() {
+        if (this.readyState != 4) return;
+        if (this.status == 200) {
+
+            var todoList = JSON.parse(this.responseText);
+            todoList.forEach(element => {
+                descriptions.push(element.description);
+                ids.push(element.id);
+            });
+            // 2) Use received info to get the correct ID of the item that we want to delete
+            var index = descriptions.indexOf(description, 0);
+            var id = ids[index]
+            var http = new XMLHttpRequest();
+            var url_put = 'http://localhost:8086/editTodo';
+
+            // 3) Send HTTP requests
+            http.onreadystatechange = function() {
+                if (this.readyState != 4) return;
+                if (this.status == 200) {
+                    console.log(http.responseText);
+                    
+                }
+            };
+            console.log("I am sending this body: ", JSON.stringify({
+                "id": id,
+                "description": input.value,
+                "progress": 0,
+                "done": false,
+                "deadline": date.value
+            }));
+            http.open('PUT', url_put, true);
+            http.setRequestHeader("ID", id.toString())
+            http.setRequestHeader("Content-Type", "application/json");
+            http.send((JSON.stringify({
+                "id": id,
+                "description": input.value,
+                "progress": 0,
+                "done": false,
+                "deadline": date.value
+            })));
+        }
+    };
+    http2.open('GET', url_get, true);
+    http2.send();
+    }
+    editingDone = !editingDone;
+}
+    
     remove(itemBox, description, deadline) {
         // Functionality of delete Button
         // Remove todo from database
